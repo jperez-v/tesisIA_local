@@ -2,9 +2,9 @@ from pathlib import Path
 from tabulate import tabulate
 
 # Rutas base en Drive 
-CONFIG_ROOT = Path('/content/drive/MyDrive/structure/configs')
-MODELS_ROOT = Path('/content/drive/MyDrive/structure/models')
-DATA_ROOT   = Path('/content/drive/MyDrive/structure/datasets')
+CONFIG_ROOT = Path('/clasificacion_INSANA/structure/configs')
+MODELS_ROOT = Path('/clasificacion_INSANA/structure/models')
+DATA_ROOT   = Path('/clasificacion_INSANA/structure/datasets')
 
 
 def print_exp_configuration(cfg: dict):

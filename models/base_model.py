@@ -30,8 +30,8 @@ class BaseTFModel:
         self.cfg          = config
         self.model_params = model_params
 
-        # Rutas en Drive
-        self.BASE_DIR = Path('/content/drive/MyDrive/structure')
+        # Rutas Local
+        self.BASE_DIR = Path('/clasificacion_INSANA/structure')
         exp = self.cfg['experiment']
         self.out_dir = self.BASE_DIR / exp['output_root'] / exp['output_subdir']
         (self.out_dir / 'checkpoints').mkdir(parents=True, exist_ok=True)

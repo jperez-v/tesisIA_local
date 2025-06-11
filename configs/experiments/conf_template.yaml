@@ -47,7 +47,7 @@ dataset:
 
   kaggle:                                     # solo si source=="kaggle"
     dataset_id:  "<kaggle_username>/<slug>"   # ej. "user/snr8-12-taps2-phase0"
-    download_dir: "datasets/kaggle"           # carpeta local donde guardar
+    download_dir: "clasificacion_INSANA/structure/kaggle"           # carpeta local donde guardar
     file_pattern: "*.hdf5"                    # glob para elegir el archivo
 
   ## Mapping de llaves dentro del HDF5 (normalmente no se cambia)

@@ -26,10 +26,10 @@ from utils.data.hdf5_dataset import HDF5Dataset
 
 
 
-# Rutas base (ajusta a tu estructura en Google Drive si cambia)
-CONFIG_ROOT = Path("/content/drive/MyDrive/structure/configs")
-MODELS_ROOT = Path("/content/drive/MyDrive/structure/models")
-DATA_ROOT   = Path("/content/drive/MyDrive/structure/datasets")
+# Rutas base 
+CONFIG_ROOT = Path("/clasificacion_INSANA/structure/configs")
+MODELS_ROOT = Path("/clasificacion_INSANA/structure/models")
+DATA_ROOT   = Path("/clasificacion_INSANA/structure/datasets")
 
 def load_config(exp_name:str):
     exp_path = CONFIG_ROOT / "experiments" / f"{exp_name}.yaml"
