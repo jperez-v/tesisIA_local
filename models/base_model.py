@@ -5,7 +5,7 @@ from pathlib import Path
 from tensorflow.keras.losses import CategoricalCrossentropy
 
 
-ROOT = Path().cwd().resolve()
+ROOT = Path().cwd().resolve().parent
 BASE_DIR = ROOT / 'tesisIA_local'
 
 class EpochLoggerCallback(tf.keras.callbacks.Callback):

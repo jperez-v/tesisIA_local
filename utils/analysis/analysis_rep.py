@@ -8,7 +8,7 @@ from IPython.display import display
 import seaborn as sns
 
 
-ROOT = Path().cwd().resolve().parent.parent
+ROOT = Path().cwd().resolve().parent
 BASE_DIR = ROOT / "tesisIA_local"
 
 

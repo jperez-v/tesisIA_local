@@ -16,7 +16,7 @@ from sklearn.metrics import (
 )
 
 
-ROOT = Path().cwd().resolve().parent.parent
+ROOT = Path().cwd().resolve().parent
 BASE_DIR = ROOT / "tesisIA_local"
 
 class ExperimentAnalyzer:
