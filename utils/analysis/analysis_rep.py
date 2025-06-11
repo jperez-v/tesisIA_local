@@ -8,6 +8,10 @@ from IPython.display import display
 import seaborn as sns
 
 
+ROOT = Path().cwd().resolve().parent.parent
+BASE_DIR = ROOT / "tesisIA_local"
+
+
 class ExperimentRepAnalyzer:
     """
     Agrega y resume los resultados de un experimento con Repeticiones + (opcionalmente) K-Fold.
@@ -26,7 +30,7 @@ class ExperimentRepAnalyzer:
              'output_root', 'output_subdir'}
         """
         # --- Inicialización de rutas y flags ---
-        self.BASE_DIR = Path('/clasificacion_INSANA/structure')
+        self.BASE_DIR = BASE_DIR
         self.cfg = cfg
         exp_cfg = self.cfg.get('experiment', {})
 

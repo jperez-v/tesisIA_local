@@ -16,6 +16,9 @@ import h5py
 import numpy as np
 from sklearn.model_selection import train_test_split, StratifiedKFold
 
+ROOT = Path().cwd().resolve().parent.parent
+BASE_DIR = ROOT / "tesisIA_local"
+
 try:
     # solo necesario si usas source='kaggle'
     os.environ['KAGGLE_USERNAME'] = 'ilikepizzaanddrones'

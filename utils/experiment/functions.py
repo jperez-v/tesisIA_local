@@ -27,9 +27,11 @@ from utils.data.hdf5_dataset import HDF5Dataset
 
 
 # Rutas base 
-CONFIG_ROOT = Path("/clasificacion_INSANA/structure/configs")
-MODELS_ROOT = Path("/clasificacion_INSANA/structure/models")
-DATA_ROOT   = Path("/clasificacion_INSANA/structure/datasets")
+ROOT = Path().cwd().resolve().parent.parent
+
+CONFIG_ROOT = ROOT / "tesisIA_local" / "configs"
+MODELS_ROOT = ROOT / "tesisIA_local" / "models"
+DATA_ROOT   = ROOT / "tesisIA_local" / "datasets"
 
 def load_config(exp_name:str):
     exp_path = CONFIG_ROOT / "experiments" / f"{exp_name}.yaml"

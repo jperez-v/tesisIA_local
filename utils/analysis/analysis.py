@@ -16,6 +16,8 @@ from sklearn.metrics import (
 )
 
 
+ROOT = Path().cwd().resolve().parent.parent
+BASE_DIR = ROOT / "tesisIA_local"
 
 class ExperimentAnalyzer:
     # ------------------------------------------------------------------ #
@@ -59,7 +61,7 @@ class ExperimentAnalyzer:
             self.fold_index = None
         
         
-        self.BASE_DIR = Path('/clasificacion_INSANA/structure')
+        self.BASE_DIR = BASE_DIR
         exp_cfg = self.cfg.get('experiment', {})
         self.output_dir = (
             self.BASE_DIR
