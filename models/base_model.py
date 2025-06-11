@@ -4,6 +4,10 @@ from tensorflow.keras.callbacks import ModelCheckpoint, TensorBoard, EarlyStoppi
 from pathlib import Path
 from tensorflow.keras.losses import CategoricalCrossentropy
 
+
+ROOT = Path().cwd().resolve()
+BASE_DIR = ROOT / 'tesisIA_local'
+
 class EpochLoggerCallback(tf.keras.callbacks.Callback):
     def __init__(self, log_freq=5):
         super().__init__()
@@ -31,7 +35,7 @@ class BaseTFModel:
         self.model_params = model_params
 
         # Rutas Local
-        self.BASE_DIR = Path('/clasificacion_INSANA/structure')
+        self.BASE_DIR = BASE_DIR
         exp = self.cfg['experiment']
         self.out_dir = self.BASE_DIR / exp['output_root'] / exp['output_subdir']
         (self.out_dir / 'checkpoints').mkdir(parents=True, exist_ok=True)

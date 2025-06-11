@@ -27,7 +27,7 @@ from utils.data.hdf5_dataset import HDF5Dataset
 
 
 # Rutas base 
-ROOT = Path().cwd().resolve().parent.parent
+ROOT = Path().cwd().resolve().parent
 
 CONFIG_ROOT = ROOT / "tesisIA_local" / "configs"
 MODELS_ROOT = ROOT / "tesisIA_local" / "models"
@@ -47,7 +47,7 @@ def load_config(exp_name:str):
 def load_experiment(
     exp_name: str,
     repeat_index: int,
-    fold_index: int | None = None,
+    fold_index: int,
     ):
     """
     Devuelve:
