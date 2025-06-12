@@ -13,10 +13,10 @@ _base_: default.yaml
 # ---------------------------------------------------------------------
 experiment:
   ## Nombre único y corto (carpetas, TensorBoard, etc.)
-  name:        "red_carlos_ESC_1"                   # p.ej. "exp_model1_b"
+  name:        "red_carlos_ESC_10"                   # p.ej. "exp_model1_b"
 
   ## Descripción legible (se muestra en logs)
-  description: "Red Carlos ESC 1"
+  description: "Red Carlos ESC 10"
 
   ## Módulo (.ipynb) dentro de structure/models/
   model_module: "red_carlos"               # p.ej. "model1"
@@ -28,7 +28,7 @@ experiment:
   output_root:  "outputs"
 
   ## Subcarpeta específica de este experimento
-  output_subdir: "red_carlos_ESC_1"              # p.ej. "model1_b"
+  output_subdir: "red_carlos_ESC_10"              # p.ej. "model1_b"
   
   repeats: 10
 
@@ -45,8 +45,8 @@ dataset:
   local_path: "-"                             # ej. "raw/mi_dataset.hdf5"
 
   kaggle:                                     # solo si source=="kaggle"
-    dataset_id:  "carlosandres069/6mods-6clases-snr0-4-taps2-phase0-45"   # ej. "user/snr8-12-taps2-phase0"
-    download_dir: "datasets/kaggle/red_carlos_ESC_1"           # carpeta local donde guardar
+    dataset_id:  "carlosandres069/6mods-6clases-snr8-12-taps2-phase90-135"   # ej. "user/snr8-12-taps2-phase0"
+    download_dir: "datasets/kaggle/red_carlos_ESC_10"           # carpeta local donde guardar
     file_pattern: "*.hdf5"                    # glob para elegir el archivo
 
   ## Mapping de llaves dentro del HDF5 (normalmente no se cambia)
@@ -96,7 +96,7 @@ training:
   batch_size:    64
   epochs:        150                  # <— ajusta aquí
   learning_rate: 1e-3
-  patience:      10                   # early‑stopping
+  patience:      20                   # early‑stopping
   seed:          42
 
 

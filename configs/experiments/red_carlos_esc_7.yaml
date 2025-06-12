@@ -45,8 +45,8 @@ dataset:
   local_path: "-"                             # ej. "raw/mi_dataset.hdf5"
 
   kaggle:                                     # solo si source=="kaggle"
-    dataset_id:  "carlosandres069/7mods-7clases-snr8-12-taps4-phase0-45"   # ej. "user/snr8-12-taps2-phase0"
-    download_dir: "datasets/kaggle"           # carpeta local donde guardar
+    dataset_id:  "carlosandres069/6mods-6clases-snr8-12-taps4-phase0-45"   # ej. "user/snr8-12-taps2-phase0"
+    download_dir: "datasets/kaggle/red_carlos_ESC_7"           # carpeta local donde guardar
     file_pattern: "*.hdf5"                    # glob para elegir el archivo
 
   ## Mapping de llaves dentro del HDF5 (normalmente no se cambia)
@@ -63,7 +63,6 @@ dataset:
     - "32qam cross"
     - "64qam"
     - "128qam cross"
-    - "256qam"
     
   ## Porcentaje del Dataset para testeo
   test_pct: 0.1
@@ -80,7 +79,7 @@ dataset:
 model:
   params:
     seq_len:            4096          # nº muestras por señal
-    n_classes:          7             # ≡ len(class_names)
+    n_classes:          6             # ≡ len(class_names)
     filters:            32
     num_heads:          2
     key_dim:            16
@@ -94,10 +93,10 @@ model:
 # 4) ENTRENAMIENTO
 # ---------------------------------------------------------------------
 training:
-  batch_size:    80
+  batch_size:    64
   epochs:        150                  # <— ajusta aquí
-  learning_rate: 5e-3
-  patience:      10                   # early‑stopping
+  learning_rate: 1e-3
+  patience:      20                   # early‑stopping
   seed:          42
 
 
